@@ -2,8 +2,9 @@ package com.petshop.Model;
 
 import javax.persistence.*;
 
+
 @Entity
-@Table(name="breeds")
+@Table(name = "breeds")
 public class Breed {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,18 +12,25 @@ public class Breed {
 
     @Column(name = "breed_name")
     private String breedName;
-    @Column(name = "group")
+
+    @Column(name = "group_name")
     private String group;
+
     @Column(name = "gender")
     private String gender;
+
     @Column(name = "age")
     private int age;
+
     @Column(name = "image_one")
     private String image1;
+
     @Column(name = "image_two")
     private String image2;
+
     @Column(name = "assigned_staff")
     private String assignedStaff;
+
     @Column(name = "residents_name")
     private String residentsName;
     //    private String dateAcquired;
