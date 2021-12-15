@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/breeded_shelter") //menu on react page and "/" page
+@RequestMapping("/breeded_shelter") //menu component in react app page after "/" page
 public class BreedController {
 
     @Autowired
