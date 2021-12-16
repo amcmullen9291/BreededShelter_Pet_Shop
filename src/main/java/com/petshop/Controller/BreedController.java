@@ -3,10 +3,9 @@ package com.petshop.Controller;
 import com.petshop.Model.Breed;
 import com.petshop.Repository.BreedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +21,15 @@ public class BreedController {
         return breedRepository.findAll();
     }
 
+    @GetMapping("/residents/group_list/group")
+    public ResponseEntity<List<Breed>> getGroupList(@RequestParam String group) {
+        return new ResponseEntity<List<Breed>>(breedRepository.findByGroup(group), HttpStatus.OK);
+    }
+
+    @GetMapping("/residents/current/breedName")
+    public ResponseEntity<List<Breed>> getBreedList(@RequestParam String breedName) {
+        return new ResponseEntity<List<Breed>>(breedRepository.findByBreedName(breedName), HttpStatus.OK);
+    }
 
 
 }

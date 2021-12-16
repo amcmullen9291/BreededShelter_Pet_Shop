@@ -58,7 +58,7 @@ public class Breed {
 
     public String getBreedName() { return breedName; }
 
-    public void setBreedName(String breedName) { this.breedName = breedName; }
+    public void setBreedName(String breed_name) { this.breedName = breed_name; }
 
     public String getGroup() { return group; }
 
