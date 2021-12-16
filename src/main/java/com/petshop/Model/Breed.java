@@ -86,12 +86,14 @@ public class Breed {
 
     public void setResidentsName(String residentsName) { this.residentsName = residentsName; }
 
+// Updated upstream
     public String getResidentsName() { return residentsName; }
 
     public void setAlt(String alt) { this.alt = alt; }
 
     public String getAlt() { return alt; }
 
+// Stashed changes
     @Override
     public String toString() {
         return "Pet [id=" + id + ", name=" + breedName + ", group=" + group + ", gender=" + gender + ", age="
