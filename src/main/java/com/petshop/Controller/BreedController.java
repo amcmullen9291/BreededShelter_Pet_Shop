@@ -21,15 +21,14 @@ public class BreedController {
         return breedRepository.findAll();
     }
 
-    @GetMapping("/residents/group_list/group")
-    public ResponseEntity<List<Breed>> getGroupList(@RequestParam String group) {
-        return new ResponseEntity<List<Breed>>(breedRepository.findByGroup(group), HttpStatus.OK);
-    }
+//    @GetMapping("/residents/group_list/group")
+//    public ResponseEntity<List<Breed>> getGroupList(@RequestParam String group) {
+//        return new ResponseEntity<List<Breed>>(breedRepository.findByGroup(group), HttpStatus.OK);
+//    }
 
-    @GetMapping("/residents/current/breedName")
-    public ResponseEntity<List<Breed>> getBreedList(@RequestParam String breedName) {
-        return new ResponseEntity<List<Breed>>(breedRepository.findByBreedName(breedName), HttpStatus.OK);
-    }
-
+//    @GetMapping("/residents/current/breedName") //@ with Redux just filter Store results
+//    public ResponseEntity<List<Breed>> getBreedList(@RequestParam("breedName") String breedName) {
+//        return new ResponseEntity<List<Breed>>(breedRepository.findByBreedName(breedName), HttpStatus.OK);
+//    }
 
 }

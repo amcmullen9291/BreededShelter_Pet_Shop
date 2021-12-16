@@ -91,4 +91,11 @@ public class Breed {
     public void setAlt(String alt) { this.alt = alt; }
 
     public String getAlt() { return alt; }
+
+    @Override
+    public String toString() {
+        return "Pet [id=" + id + ", name=" + breedName + ", group=" + group + ", gender=" + gender + ", age="
+                + age + ", image1=" + image1 + ", image2=" + image2 + ",residentsName=" + residentsName + " ]";
+    }
+
 }

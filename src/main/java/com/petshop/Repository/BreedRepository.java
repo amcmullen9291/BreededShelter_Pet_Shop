@@ -11,4 +11,5 @@ public interface BreedRepository extends JpaRepository<Breed, Long> {
     List<Breed> findByGroup(String group);
 
     List<Breed> findByBreedName(String breed_name);
+
 }
