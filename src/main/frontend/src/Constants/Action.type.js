@@ -1,0 +1,5 @@
+export  const ActionTypes = {
+    SET_BREEDS: "SET_BREEDS",
+    SELECTED_BREED: "SELECTED_BREED",
+    FILTERED_BREED_LIST: "FILTERED_BREED_LIST"
+}
