@@ -1,17 +1,14 @@
-//import React, { useState, useEffect } from 'react';
 import React from 'react';
-//import { connect, useDispatch } from 'react-redux';
-//import { setStadiumList } from '../Actions/StadiumActions';
-import { Link } from 'react-router-dom';
-
-
 
 function Welcome(){
+
+const [state, useState] = useState(initialState);
+
 return (
-        <>
-        <center><h1>Welcome Page</h1></center>
-        </>
-    )
+    <>
+    <center><h1>Welcome Page</h1></center>
+    </>
+)
+
 }
-// export default connect(mapStateToProps, mapDispatchToProps)(BreedList);
- export default Welcome;
+export default Welcome
