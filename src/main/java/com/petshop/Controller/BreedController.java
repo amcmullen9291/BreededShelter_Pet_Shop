@@ -32,7 +32,11 @@ public class BreedController {
     public ResponseEntity<Breed> updateBreed(@PathVariable(value = "id")long id, @RequestBody Breed breedDetails)
             throws ResourceNotFoundException{
         Breed breed = breedRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id + ": not found"));
+// Updated upstream
 
+
+        
+// Stashed changes
         breed.setBreedName(breedDetails.getBreedName());
         breed.setAge(breedDetails.getAge());
         breed.setGender(breedDetails.getGender());
@@ -51,8 +55,8 @@ public class BreedController {
     @DeleteMapping("/breed/{id}")
     public Map<Long, String> removeBreed(@PathVariable long id)throws ResourceNotFoundException {
 
-        Breed employee = breedRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Id not found"));
-        breedRepository.delete(employee);
+        Breed breed = breedRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Id not found"));
+        breedRepository.delete(breed);
         Map<Long, String> response = new HashMap<>();
         response.put(id, "Breed Deleted");
         return response;
