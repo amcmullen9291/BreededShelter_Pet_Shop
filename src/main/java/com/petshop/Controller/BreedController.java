@@ -32,11 +32,6 @@ public class BreedController {
     public ResponseEntity<Breed> updateBreed(@PathVariable(value = "id")long id, @RequestBody Breed breedDetails)
             throws ResourceNotFoundException{
         Breed breed = breedRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id + ": not found"));
-// Updated upstream
-
-
-        
-// Stashed changes
         breed.setBreedName(breedDetails.getBreedName());
         breed.setAge(breedDetails.getAge());
         breed.setGender(breedDetails.getGender());
