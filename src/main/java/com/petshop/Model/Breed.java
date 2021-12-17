@@ -94,10 +94,10 @@ public class Breed {
     public String getAlt() { return alt; }
 
 // Stashed changes
-    @Override
-    public String toString() {
-        return "Pet [id=" + id + ", name=" + breedName + ", group=" + group + ", gender=" + gender + ", age="
-                + age + ", image1=" + image1 + ", image2=" + image2 + ",residentsName=" + residentsName + " ]";
-    }
+//    @Override
+//    public String toString() {
+//        return "Pet [id=" + id + ", name=" + breedName + ", group=" + group + ", gender=" + gender + ", age="
+//                + age + ", image1=" + image1 + ", image2=" + image2 + ",residentsName=" + residentsName + " ]";
+//    }
 
 }
