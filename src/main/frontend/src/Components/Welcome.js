@@ -1,12 +1,28 @@
+//import React, { useState, useEffect } from 'react';
 import React from 'react';
+import BreedService from '../Services/BreedService';
 
 function Welcome(){
 
-const [state, useState] = useState(initialState);
+//        const [Residents, setResidents] = useState([]);
+//
+//        useEffect(() => {
+//           getBreeds();
+//        },[]);
+
+//       const getBreeds = () => {
+//            BreedService.getBreeds.then((resp) => {
+//                setResidents(resp.data)
+//                console.log(Residents);
+//            });
+//        };
 
 return (
     <>
-    <center><h1>Welcome Page</h1></center>
+    <div className = "container">
+    <center><h1>Breeded Shelter</h1></center>
+    </div>
+
     </>
 )
 
