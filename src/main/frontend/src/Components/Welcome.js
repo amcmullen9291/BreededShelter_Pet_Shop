@@ -10,9 +10,11 @@ function Welcome(){
 
      const dispatch = useDispatch();
 
+     const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/residents";
+
      const fetchBreeds = async () => {
 
-        const APIresponse = await axios.get(`http://localhost:8080/breeded_shelter/residents`)
+        const APIresponse = await axios.get(BREED_LIST_URL)
         .then(response => {dispatch(setBreeds(response))})
         .then(console.log(Residents.Residents.data[3]))
         .catch((error) => {
@@ -30,7 +32,10 @@ return (
     <div className = "container">
     <center><h1>Breeded Shelter</h1></center>
     </div>
-
+    <div>
+    <hr/>
+    <center><a href={"/breeded-shelter/main"}><button>Welcome</button></a></center>
+    </div>
     </>
     )
 }
