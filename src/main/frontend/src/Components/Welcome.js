@@ -1,21 +1,29 @@
-//import React, { useState, useEffect } from 'react';
-import React from 'react';
-import BreedService from '../Services/BreedService';
+import { connect, useDispatch } from 'react-redux';
+import { setBreeds } from '../Actions/BreedActions';
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux';
+import axios from 'axios';
 
 function Welcome(){
 
-//        const [Residents, setResidents] = useState([]);
-//
-//        useEffect(() => {
-//           getBreeds();
-//        },[]);
+    const Residents = useSelector((state) => state.Residents);
 
-//       const getBreeds = () => {
-//            BreedService.getBreeds.then((resp) => {
-//                setResidents(resp.data)
-//                console.log(Residents);
-//            });
-//        };
+     const dispatch = useDispatch();
+
+     const fetchBreeds = async () => {
+
+        const APIresponse = await axios.get(`http://localhost:8080/breeded_shelter/residents`)
+        .then(response => {dispatch(setBreeds(response))})
+        .then(console.log(Residents.Residents.data[3]))
+        .catch((error) => {
+          console.log("Error:", error);
+        });
+
+      };
+
+      useEffect(() => {
+        fetchBreeds();
+      }, [])
 
 return (
     <>
@@ -24,7 +32,20 @@ return (
     </div>
 
     </>
-)
+    )
+}
+const mapStateToProps = (state) => {
+  return {
+    Residents: state.Residents
+  }
 
 }
-export default Welcome
+
+     const mapDispatchToProps = (dispatch) => {
+       return{
+         Residents: (list) => { dispatch({type: 'SET_BREEDS', list})}
+       }
+     }
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Welcome);

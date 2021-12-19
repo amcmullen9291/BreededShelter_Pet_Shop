@@ -1,13 +1,13 @@
 import { ActionTypes } from '../Constants/Action.type';
 
 const initialState = {
-    BreedsList: [],
+    Residents: [],
 };
 
 export const BreedReducer = (state=initialState, {type, payload}) => {
     switch (type) {
         case ActionTypes.SET_BREEDS:
-            return { ...state, BreedsList: payload};
+            return { ...state, Residents: payload};
         default:
             return state
     }

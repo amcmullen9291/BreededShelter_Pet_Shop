@@ -1,9 +1,9 @@
 import { ActionTypes } from '../Constants/Action.type';
 
-export const setBreeds = (list) => {
+export const setBreeds = (Residents) => {
     return {
         type: ActionTypes.SET_BREEDS,
-        payload: list
+        payload: Residents
     }
 }
 
