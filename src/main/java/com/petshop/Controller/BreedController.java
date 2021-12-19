@@ -56,8 +56,8 @@ public class BreedController {
     @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:3000", " http://192.168.1.69:3000"})
     public Map<Long, String> removeBreed(@PathVariable long id)throws ResourceNotFoundException {
 
-        Breed employee = breedRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Id not found"));
-        breedRepository.delete(employee);
+        Breed breed = breedRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Id not found"));
+        breedRepository.delete(breed);
         Map<Long, String> response = new HashMap<>();
         response.put(id, "Breed Deleted");
         return response;
