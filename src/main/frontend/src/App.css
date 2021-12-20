@@ -151,3 +151,18 @@ margin-left: 1%;
 margin-bottom: 5px;
 }
 
+.spacer{
+  /* background-color: black; */
+  border: 2px solid tan;
+  margin-left: 1px;
+  margin-right: 1px;
+  width: 5px;
+}
+
+Table{
+border: 2px solid brown;
+}
+
+td{
+text-align: center;
+}
