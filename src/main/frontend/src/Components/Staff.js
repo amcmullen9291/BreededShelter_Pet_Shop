@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { setBreeds } from '../Actions/BreedActions';
 import { useSelector } from 'react-redux';
 
-function Menu(){
+function Staff(){
 
 const Residents = useSelector((state) => state.Residents);
 console.log(Residents);
@@ -15,12 +15,12 @@ return (
         <center>
             <ol>
                 <li class="crumb"><a href="/breeded-shelter/facility" id="navBar">Breeded Shelter</a></li>
-                <li class="crumb"><a href="/breeded-shelter/staff" id="navBar2">Meet Our Staff</a></li>
+                <li class="crumb"><a href="/breeded-shelter/residents" id="navBar2">Meet Our Staff</a></li>
                 <li class="crumb"><a href="/breeded-shelter/residents" id="navBar3">Our Residents</a></li>
             </ol>
             </center>
         </nav>
-        <center><h1>Main Menu</h1></center>
+        <center><h1>Our Staff</h1></center>
             <div>
             <hr/>
                 <center><h5>Please,</h5></center>
@@ -32,4 +32,4 @@ return (
 }
 
 
-export default connect(null, null)(Menu);
+export default connect(null, null)(Staff);

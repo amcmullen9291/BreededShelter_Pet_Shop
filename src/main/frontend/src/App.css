@@ -117,3 +117,28 @@ margin-right: 25%;
  #navBar2{
     color: #B6174B;
  }
+
+ .facilityPics{
+   display: grid;
+   grid-template-columns: min-content 1fr;
+   margin-left: 5%;
+ }
+
+ .leftArea{
+ width: 600px;
+ float: left;
+ margin-bottom: 5%;
+ }
+
+ .rightArea{
+ width: 425px;
+ height: 225px;
+ margin-left: 50%;
+ border: 6px solid #C3EB78;
+ }
+
+#bigPic{
+height: 75%;
+width: 75%;
+}
+

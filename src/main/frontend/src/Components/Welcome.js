@@ -36,8 +36,8 @@ return (
     <nav class="crumbsArea">
         <center>
             <ol>
-                <li class="crumb"><a href="/breeded-shelter/residents" id="navBar">Breeded Shelter</a></li>
-                <li class="crumb"><a href="/breeded-shelter/residents" id="navBar2">Meet Our Staff</a></li>
+                <li class="crumb"><a href="/breeded-shelter/facility" id="navBar">Breeded Shelter</a></li>
+                <li class="crumb"><a href="/breeded-shelter/staff" id="navBar2">Meet Our Staff</a></li>
                 <li class="crumb"><a href="/breeded-shelter/residents" id="navBar3">Our Residents</a></li>
             </ol>
         </center>
