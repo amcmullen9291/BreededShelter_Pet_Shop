@@ -1,2 +1,119 @@
+Body{
+border: 1em solid grey;
+}
 
 
+#mainBackGround{
+    background-image: linear-gradient(to top, #fafa6e, #f5d34b, #edad31, #e18620, #d15e1a);
+    border: 1.5em solid #ED6A5A;
+}
+
+#mainBottom{
+    background: #C3EB78;
+    height: 100%;
+}
+
+#button1{
+    margin: 2em;
+    background-color: ivory;
+    border: 2px solid grey;
+    color: red;
+    margin-left: 80%;
+}
+
+#mainImage {
+  border:solid 2px;
+  border-bottom-color:#ffe;
+  border-left-color:#eed;
+  border-right-color:#eed;
+  border-top-color:#ccb;
+  max-height:25%;
+  max-width:25%;
+}
+
+#mainImage2 {
+  border:solid 2px;
+  border-bottom-color:#ffe;
+  border-left-color:#eed;
+  border-right-color:#eed;
+  border-top-color:#ccb;
+  max-height:25%;
+  max-width:25%;
+}
+
+.frame {
+  background-color:#ddc;
+  border:solid 5vmin #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-radius:2px;
+  border-right-color:#eee;
+  border-top-color:#ddd;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  display:inline-block;
+  margin:10vh 10vw;
+  height:80vh;
+  padding:8vmin;
+  position:relative;
+  text-align:center;
+  &:before {
+    border-radius:2px;
+    bottom:-2vmin;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+    content:"";
+    left:-2vmin;
+    position:absolute;
+    right:-2vmin;
+    top:-2vmin;
+  }
+  &:after {
+    border-radius:2px;
+    bottom:-2.5vmin;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+    content:"";
+    left:-2.5vmin;
+    position:absolute;
+    right:-2.5vmin;
+    top:-2.5vmin;
+  }
+}
+
+nav {
+    border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+    margin-left: 5%;
+    margin-right:2%;
+    color: purple;
+    border: 2px solid #306B34;
+    font-family: georgia;
+    font-size: 18px;
+    background-color: #ED6A5A;
+}
+.crumbsArea{
+margin-left: 25%;
+margin-right: 25%;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #000;
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+ #navBar{
+    color:purple;
+ }
+
+ #navBar2{
+    color: #B6174B;
+ }

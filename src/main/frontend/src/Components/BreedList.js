@@ -8,12 +8,12 @@ import { Link } from 'react-router-dom'
 function BreedList(){
 //    const Residents = useSelector((state) => state.Residents);
      const dispatch = useDispatch();
+     const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/residents";
 
      const fetchBreeds = async () => {
 
-        const APIResponse = await axios.get(`http://localhost:8080/breeded_shelter/residents`)
+        const APIResponse = await axios.get(BREED_LIST_URL)
         .then(response => {dispatch(setBreeds(response))})
-//        .then(console.log(Residents.Residents.data[3]))
         .catch((error) => {
           console.log("Error:", error);
         });

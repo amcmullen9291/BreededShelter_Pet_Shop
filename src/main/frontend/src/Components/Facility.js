@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function FilteredListings(){
+function Facility(){
 return (
         <>
         <center><h1>Filtered List Page</h1></center>
@@ -14,4 +14,4 @@ return (
     )
 }
 // export default connect(mapStateToProps, mapDispatchToProps)(BreedList);
- export default FilteredListings;
+ export default Facility;
