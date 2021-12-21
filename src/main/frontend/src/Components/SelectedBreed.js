@@ -14,10 +14,7 @@ function SelectedBreed(){
     console.log("Params Breed: ", params.breed)
 
     const ID = params.id;
-    const breedName = params.breed;
     const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/breed/" +ID;
-
-   console.log("Endpoint URL: ", BREED_LIST_URL)
 
     const Residents = useSelector((state) => state.Residents);
 

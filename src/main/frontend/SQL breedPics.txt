@@ -1,0 +1,336 @@
+ {
+        "id": 6,
+        "breedName": "Affenpincher",
+        "group": "Toy",
+        "gender": "M",
+        "age": 12,
+        "image1": "affenpinscher1_1.jpg",
+        "image2": "affenpinscher1_2.jpg",
+        "assignedStaff": "Sharron",
+        "residentsName": "Capricorn",
+        "alt": "breeded shelter"
+    },DONE 
+    {
+        "id": 7,
+        "breedName": "Affenpincher",
+        "group": "Toy",
+        "gender": "F",
+        "age": 12,
+        "image1": "affenpinscher2_1.jpg",
+        "image2": "affenpinscher2_2.jpg",
+        "assignedStaff": "Sharron",
+        "residentsName": "Bleu",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 8,
+        "breedName": "Pug",
+        "group": "Toy",
+        "gender": "M",
+        "age": 5,
+        "image1": "pug1_1.jpg",
+        "image2": "pug1_2.jpg",
+        "assignedStaff": "Sharron",
+        "residentsName": "Santas Helper",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 9,
+        "breedName": "Pug",
+        "group": "Toy",
+        "gender": "M",
+        "age": 12,
+        "image1": "pug2_1.jpg",
+        "image2": "pug2_2.jpg",
+        "assignedStaff": "Sharron",
+        "residentsName": "Jasper",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 10,
+        "breedName": "Pomeranian",
+        "group": "Toy",
+        "gender": "F",
+        "age": 25,
+        "image1": "pomeranian1_1.jpg",
+        "image2": "pomeranian1_2.jpg",
+        "assignedStaff": "Sharron",
+        "residentsName": "Mary",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 11,
+        "breedName": "Pomeranian",
+        "group": "Toy",
+        "gender": "F",
+        "age": 48,
+        "image1": "pomeranian2_1.jpg",
+        "image2": "pomeranian1_2.jpg",
+        "assignedStaff": "Sharron",
+        "residentsName": "Puck",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 12,
+        "breedName": "Biewer Terrier",
+        "group": "Toy",
+        "gender": "M",
+        "age": 19,
+        "image1": "biewer1_1.jpg",
+        "image2": "biewer1_2.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "New Name",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 13,
+        "breedName": "Biewer Terrier",
+        "group": "Toy",
+        "gender": "M",
+        "age": 35,
+        "image1": "biewer2_1.jpg",
+        "image2": "biewer2_2.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Poochie",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 14,
+        "breedName": "Cardigan Welsh Corgi",
+        "group": "Toy",
+        "gender": "M",
+        "age": 12,
+        "image1": "corgi1_1.jpg",
+        "image2": "corgi1_2.jpg",
+        "assignedStaff": "Sharron",
+        "residentsName": "Butch",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 15,
+        "breedName": "Cardigan Welsh Corgi",
+        "group": "Toy",
+        "gender": "M",
+        "age": 36,
+        "image1": "corgi2_1.jpg",
+        "image2": "No-Image.jpg",
+        "assignedStaff": "Sharron",
+        "residentsName": "Daniel",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 16,
+        "breedName": "Airedale Terrier",
+        "group": "Terrier",
+        "gender": "M",
+        "age": 28,
+        "image1": "airedale1_1.jpg",
+        "image2": "No-Image.jpg",
+        "assignedStaff": "Sharron",
+        "residentsName": "James",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 17,
+        "breedName": "Airedale Terrier",
+        "group": "Terrier",
+        "gender": "F",
+        "age": 40,
+        "image1": "airedale2_1.jpg",
+        "image2": "airedale2_2.jpg",
+        "assignedStaff": "Sharron",
+        "residentsName": "Sarah",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 18,
+        "breedName": "Glen of Imaal Terrier",
+        "group": "Terrier",
+        "gender": "M",
+        "age": 24,
+        "image1": "imaal1_1.jpg",
+        "image2": "No-Image.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Chucky",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 19,
+        "breedName": "Glen of Imaal Terrier",
+        "group": "Terrier",
+        "gender": "M",
+        "age": 24,
+        "image1": "imaal2_1.jpg",
+        "image2": "No-Image.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Bruce All-Mighty",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 20,
+        "breedName": "Russell Terrier",
+        "group": "Terrier",
+        "gender": "M",
+        "age": 39,
+        "image1": "russell1_1.jpg",
+        "image2": "russell1_2.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Sandy",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 21,
+        "breedName": "Russell Terrier",
+        "group": "Terrier",
+        "gender": "M",
+        "age": 39,
+        "image1": "russell2_1.jpg",
+        "image2": "russell2_2.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Shakespeare",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 22,
+        "breedName": "Nederlandse Kooikerhondj",
+        "group": "Sporting Group",
+        "gender": "M",
+        "age": 41,
+        "image1": "kooiker1_1.jpg",
+        "image2": "kooiker1_2.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Bob Hoskin",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 23,
+        "breedName": "Nederlandse Kooikerhondj",
+        "group": "Sporting Group",
+        "gender": "M",
+        "age": 5,
+        "image1": "kooiker2_1.jpg",
+        "image2": "kooiker2_2.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Chester",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 30,
+        "breedName": "Weimaranier",
+        "group": "Sporting Group",
+        "gender": "M",
+        "age": 19,
+        "image1": "weimaraner1_1.jpg",
+        "image2": "weimaraner1_2.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Phil",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 31,
+        "breedName": "Weimaranier",
+        "group": "Sporting Group",
+        "gender": "M",
+        "age": 27,
+        "image1": "weimaraner2_1.jpg",
+        "image2": "weimaraner2_2.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Pork Chop",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 32,
+        "breedName": "Brittany",
+        "group": "Sporting Group",
+        "gender": "F",
+        "age": 6,
+        "image1": "brittany1_2.jpg",
+        "image2": "brittany1_1.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Ms Hulk",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 33,
+        "breedName": "Brittany",
+        "group": "Sporting Group",
+        "gender": "F",
+        "age": 8,
+        "image1": "brittany2_1.jpg",
+        "image2": "brittany2_1.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Tiffany",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 34,
+        "breedName": "English Setter",
+        "group": "Sporting Group",
+        "gender": "M",
+        "age": 32,
+        "image1": "englishSetter2_1.jpg",
+        "image2": "No-Image.jpg",
+        "assignedStaff": "Sharon",
+        "residentsName": "Rochester",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 35,
+        "breedName": "English Setter",
+        "group": "Sporting Group",
+        "gender": "M",
+        "age": 53,
+        "image1": "englishSetter1_1.jpg",
+        "image2": "englishSetter1_2.jpg",
+        "assignedStaff": "Sharon",
+        "residentsName": "Santa Fe",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 36,
+        "breedName": "Australian Cattle Dog",
+        "group": "Herding Group",
+        "gender": "M",
+        "age": 28,
+        "image1": "cattleDog1_1.jpg",
+        "image2": "cattleDog1_2.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Marmaduke",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 37,
+        "breedName": "Australian Cattle Dog",
+        "group": "Herding Group",
+        "gender": "F",
+        "age": 6,
+        "image1": "cattleDog2_1.jpg",
+        "image2": "cattleDog2_2.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Wilber",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 38,
+        "breedName": "Collie",
+        "group": "Herding Group",
+        "gender": "M",
+        "age": 6,
+        "image1": "collie1_1.jpg",
+        "image2": "collie1_2.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Neptune",
+        "alt": "breeded shelter"
+    },DONE
+    {
+        "id": 39,
+        "breedName": "Collie",
+        "group": "Herding Group",
+        "gender": "F",
+        "age": 6,
+        "image1": "collie2_2.jpg",
+        "image2": "collie2_1.jpg",
+        "assignedStaff": "Mitchel",
+        "residentsName": "Ruby",
+        "alt": "breeded shelter"
+    }DONE
