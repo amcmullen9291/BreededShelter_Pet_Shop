@@ -227,3 +227,33 @@ background: white;
 #puppyAge{
 color:yellow;
 }
+
+.staffBios{
+margin-left: 5%;
+}
+
+.staffPics{
+vertical-align:middle;
+}
+
+.staffWords{
+vertical-align:middle;
+display:inline;
+}
+
+#bottomStaffText{
+margin-left: 70%;
+color: magenta;
+font-size: 2em;
+}
+
+#jumpingMan{
+height:15%;
+width: 15%;
+}
+
+#singingGirl{
+height:15%;
+width: 15%;
+margin-left: 10%;
+}
