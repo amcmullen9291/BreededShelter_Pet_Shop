@@ -1,31 +1,25 @@
-import { connect, useSelector, useDispatch } from 'react-redux';
-import { filteredBreedList } from '../Actions/BreedActions';
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import { useState, useEffect } from 'react';
 
-function BreedList(){
+function BreedList() {
+  const [books, setBooks] = useState(null);
+const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/residents";
+  // + adding the use
+  useEffect(() => {
+    getData();
 
-  const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/residents";
+    // we will use async/await to fetch this data
+    async function getData() {
+      const response = await fetch(BREED_LIST_URL);
+      const data = await response.json();
 
-    const[ Residents, setResidents ] = useState([]);
-
-    useEffect(() => {
-        const fetchBreeds = async() => {
-            try{
-                const resp = await fetch(BREED_LIST_URL);
-                const json = resp.json();
-                console.log(json);
-                setResidents(json.results)
-            }catch(e){
-                console.log(e);
-            }
-        };
-        fetchBreeds();
-    }, []);
+      // store the data into our books variable
+      setBooks(data) ;
+    }
+  }, []); // <- you may need to put the setBooks function in this array
 
 return (
-    <>
-    <div id="mainBackGround">
+<>
+ <div id="mainBackGround">
     <div className = "container">
     <center><img id="mainImage2" src={`${process.env.PUBLIC_URL}/Logos/text-1639206732282.png`} alt="Welcome to Breed Shelter" /></center>
     </div>
@@ -41,31 +35,33 @@ return (
     <div>
     <hr/>
     </div>
-    <center>
-    <div className="welcomePage">
-    <table id="residentTable">
-        <body>
+    {books && (
+      <div className="books">
+<center><table id="residentsTable">
+        <thead>
+        <tr id="tableHead"><td className="name">Resident</td><td className="spacer"></td><td className="breed">Breed</td><td className="spacer"></td><td className="group">Grouping</td><td className="spacer"></td><td className="gender">Gender</td><td className="spacer"></td><td className="age"><center>Age(Weeks)</center></td></tr>
+        </thead>
+        <tbody>
+        {books.map((book, index) => (
+          <div key={index}>
             <tr>
-            <td>Breed</td>
-            <td className="spacer"></td>
-            <td>Group</td>
-            <td className="spacer"></td>
-            <td>Residents Name</td>
-            <td className="spacer"></td>
-            <td>Age (weeks)</td>
+            <td className="name">{book.residentsName}</td><td className="spacer"></td><td className="breed">{book.breedName}</td><td className="spacer"></td><td className="group">{book.group}</td><td className="spacer"></td><td className="gender">{book.gender}</td><td className="spacer"></td><td className="age"><center>{book.age}</center></td>
             </tr>
-        </body>
-    </table>
-    </div>
-    </center>
-    </div>
-    <div id="mainBottom">
-        <div>
-        <hr/>
-        <center><button id="button1" type="button" disabled ><b>Ｗ ｅ ｌ ｃ ｏ ｍ ｅ</b></button></center>
-        </div>
-    </div>
-    </>
-    )
+          </div>
+        ))}
+        </tbody>
+</table></center>
+      </div>
+    )}
+  </div>
+      <div id="mainBottom">
+          <div>
+          <hr/>
+          <center><button id="button1" type="button" disabled ><b>Ｗ ｅ ｌ ｃ ｏ ｍ ｅ</b></button></center>
+          </div>
+      </div>
+</>
+)
 }
+
 export default BreedList;

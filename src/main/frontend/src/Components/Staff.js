@@ -21,11 +21,7 @@ return (
             </center>
         </nav>
         <center><h1>Our Staff</h1></center>
-            <div>
-            <hr/>
-                <center><h5>Please,</h5></center>
-                <center><a href={"/breeded-shelter/residents"}><button>Meet the Residents</button></a></center>
-            </div>
+
 
         </>
     )

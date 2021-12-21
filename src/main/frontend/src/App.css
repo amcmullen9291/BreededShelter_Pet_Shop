@@ -159,10 +159,67 @@ margin-bottom: 5px;
   width: 5px;
 }
 
-Table{
-border: 2px solid brown;
+
+#residentsTable{
+  border: 7px dotted #005778;
+  height:300px;
+  width: auto;
+   overflow-y:scroll;
+   display:block;
+   margin-left: 25%;
+   margin-right: 25%;
+   margin-bottom: 5%;
+   background-color: #006778;
+scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  --scrollbarBG: #CFD8DC;
 }
 
 td{
 text-align: center;
+}
+
+tr{
+text-align: center;
+}
+
+tr{
+border-bottom: 2px solid black;
+}
+
+.name{
+width: 90px;
+}
+
+.breed{
+width: 132px;
+}
+
+.group{
+width: 75px;
+}
+
+.gender{
+width: 100px;
+}
+
+#tableHead{
+display: block;
+text-align: center;
+}
+
+.age{
+text-align: center;
+}
+
+tbody {
+    display: block;
+}
+
+thead{
+background: white;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  width: auto;
 }
