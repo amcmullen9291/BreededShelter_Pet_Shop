@@ -1,21 +1,18 @@
 import { useState, useEffect } from 'react';
 
 function BreedList() {
-  const [books, setBooks] = useState(null);
+  const [Residents, setResidents] = useState(null);
 const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/residents";
   // + adding the use
   useEffect(() => {
-    getData();
+    getBreeds();
 
-    // we will use async/await to fetch this data
-    async function getData() {
+    async function getBreeds() {
       const response = await fetch(BREED_LIST_URL);
       const data = await response.json();
-
-      // store the data into our books variable
-      setBooks(data) ;
+      setResidents(data) ;
     }
-  }, []); // <- you may need to put the setBooks function in this array
+  }, []);
 
 return (
 <>
@@ -42,10 +39,10 @@ return (
         <tr id="tableHead"><td className="name">Resident</td><td className="spacer"></td><td className="breed">Breed</td><td className="spacer"></td><td className="group">Grouping</td><td className="spacer"></td><td className="gender">Gender</td><td className="spacer"></td><td className="age"><center>Age(Weeks)</center></td></tr>
         </thead>
         <tbody>
-        {books.map((book, index) => (
+        {Residents.map((puppy, index) => (
           <div key={index}>
             <tr>
-            <td className="name">{book.residentsName}</td><td className="spacer"></td><td className="breed">{book.breedName}</td><td className="spacer"></td><td className="group">{book.group}</td><td className="spacer"></td><td className="gender">{book.gender}</td><td className="spacer"></td><td className="age"><center>{book.age}</center></td>
+            <td className="name">{puppy.residentsName}</td><td className="spacer"></td><td className="breed">{puppy.breedName}</td><td className="spacer"></td><td className="group">{puppy.group}</td><td className="spacer"></td><td className="gender">{puppy.gender}</td><td className="spacer"></td><td className="age"><center>{puppy.age}</center></td>
             </tr>
           </div>
         ))}
