@@ -3,9 +3,12 @@ import { setBreeds } from '../Actions/BreedActions';
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux';
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function SelectedBreed(){
+
+    const params = useParams();
+    console.log("Param Data: ", params);
 
     const Residents = useSelector((state) => state.Residents);
 
