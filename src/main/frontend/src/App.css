@@ -159,7 +159,7 @@ margin-bottom: 5px;
 
 
 #residentsTable{
-  border: 7px dotted #005778;
+  border: 7px dotted #9A807C;
   height:300px;
   width: auto;
    overflow-y:scroll;
@@ -168,9 +168,6 @@ margin-bottom: 5px;
    margin-right: 25%;
    margin-bottom: 5%;
    background-color: #E42565;
-scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-  --scrollbarBG: #CFD8DC;
   color: #30381A;
   font-size: 20px;
 }
@@ -181,6 +178,7 @@ text-align: center;
 
 tr{
 text-align: center;
+
 }
 
 tr{
@@ -189,6 +187,11 @@ border-bottom: 2px solid black;
 
 .name{
 width: 110px;
+}
+
+#name{
+width: 110px;
+border-bottom: none;
 }
 
 .breed{
@@ -210,6 +213,12 @@ text-align: center;
 
 .age{
 text-align: right;
+width: 90px;
+}
+
+.moreInfo{
+text-align: center;
+width: 90px;
 }
 
 tbody {
@@ -256,4 +265,13 @@ width: 15%;
 height:15%;
 width: 15%;
 margin-left: 10%;
+}
+
+button.link { background:none; border:none; }
+
+#resetButton{
+    visibility: hidden;
+    display:block;
+    border-radius: 15%;
+    border: 1px solid brown;
 }

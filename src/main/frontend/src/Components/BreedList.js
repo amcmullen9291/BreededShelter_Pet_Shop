@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 export var puppyID;
 export var puppyBreed;
+
 function BreedList() {
 
   const [Residents, setResidents] = useState(null);
@@ -28,6 +29,23 @@ const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/residents";
     window.puppyBreed = breedName;
   }
 
+  function sortByGroup(e, group){
+  const newList = Residents.filter(puppy=> puppy.group === group);
+          console.log("type:", group);
+          console.log("New List:", newList);
+          setResidents(newList);
+          let button = document.getElementById("resetButton");
+          button.style.visibility = "visible" ;
+  }
+
+  function resetList(e){
+          e.preventDefault();
+          let button = document.getElementById("resetButton");
+          button.style.visibility = "hidden";
+          window.location.reload();
+          console.log("page resetting");
+        }
+
 return (
 <>
  <div id="mainBackGround">
@@ -47,21 +65,24 @@ return (
     <hr/>
     </div>
     {Residents && (
-      <div className="books">
+      <div>
 <center><table id="residentsTable">
         <thead>
-        <tr id="tableHead"><td className="name">Resident</td><td className="spacer"></td><td className="breed">Breed</td><td className="spacer"></td><td className="group">Grouping</td><td className="spacer"></td><td className="gender">Gender</td><td className="spacer"></td><td className="age">Age(Weeks)</td></tr>
+        <tr id="tableHead"><td className="name" id="name">Resident</td><td className="spacer"></td><td className="breed">Breed</td><td className="spacer"></td><td className="group">Grouping</td><td className="spacer"></td><td className="gender">Gender</td><td className="spacer"></td><td className="age">Age(Weeks)</td></tr>
         </thead>
         <tbody>
         {Residents.map((puppy, index) => (
           <div key={index}>
             <tr>
-            <td className="name">{puppy.residentsName}</td><td className="spacer"></td><td className="breed">{puppy.breedName}</td><td className="spacer"></td><td className="group">{puppy.group}</td><td className="spacer"></td><td className="gender">{puppy.gender}</td><td className="spacer"></td><td className="age" id= "puppyAge" align="right">{puppy.age}</td><td className="spacer"></td><td onClick={(e) => selectedBreed(e, `${puppy.breedName}`, `${puppy.id}`)}><Link to={`/breeded-shelter/residents/${puppy.breedName}/${puppy.id}`}>More Info</Link></td>
+            <td className="name">{puppy.residentsName}</td><td className="spacer"></td><td className="breed">{puppy.breedName}</td><td className="spacer"></td><td className="group"><button class="link"onClick={(e) => sortByGroup(e, `${puppy.group}`)}>{puppy.group}</button></td><td className="spacer"></td><td className="gender">{puppy.gender}</td><td className="spacer"></td><td className="age" id= "puppyAge" align="right">{puppy.age}</td><td className="spacer"></td><td onClick={(e) => selectedBreed(e, `${puppy.breedName}`, `${puppy.id}`)} className="moreInfo"><Link to={`/breeded-shelter/residents/${puppy.breedName}/${puppy.id}`}>Info</Link></td>
             </tr>
           </div>
         ))}
         </tbody>
-</table></center>
+</table>
+<button id="resetButton" onClick={resetList}>Return full list</button>
+</center>
+        <center><span>Click on a group name to see filter listings </span></center>
       </div>
     )}
   </div>
