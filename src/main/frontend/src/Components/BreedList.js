@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
+
+export var puppyID;
+export var puppyBreed;
 function BreedList() {
+
   const [Residents, setResidents] = useState(null);
 const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/residents";
   // + adding the use
@@ -14,6 +19,14 @@ const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/residents";
       setResidents(data) ;
     }
   }, []);
+
+  function selectedBreed(e, breedName, id){
+    e.preventDefault();
+    console.log("Breed param: ", breedName);
+    console.log("ID param: ", id);
+    window.puppyID = id;
+    window.puppyBreed = breedName;
+  }
 
 return (
 <>
@@ -43,7 +56,7 @@ return (
         {Residents.map((puppy, index) => (
           <div key={index}>
             <tr>
-            <td className="name">{puppy.residentsName}</td><td className="spacer"></td><td className="breed">{puppy.breedName}</td><td className="spacer"></td><td className="group">{puppy.group}</td><td className="spacer"></td><td className="gender">{puppy.gender}</td><td className="spacer"></td><td className="age" id= "puppyAge" align="right">{puppy.age}</td><td className="spacer"></td><td><Link to={`/breeded-shelter/residents/${puppy.breedName}/${puppy.id}`}>More Info</Link></td>
+            <td className="name">{puppy.residentsName}</td><td className="spacer"></td><td className="breed">{puppy.breedName}</td><td className="spacer"></td><td className="group">{puppy.group}</td><td className="spacer"></td><td className="gender">{puppy.gender}</td><td className="spacer"></td><td className="age" id= "puppyAge" align="right">{puppy.age}</td><td className="spacer"></td><td onClick={(e) => selectedBreed(e, `${puppy.breedName}`, `${puppy.id}`)}><Link to={`/breeded-shelter/residents/${puppy.breedName}/${puppy.id}`}>More Info</Link></td>
             </tr>
           </div>
         ))}
@@ -62,4 +75,19 @@ return (
 )
 }
 
-export default BreedList;
+const mapStateToProps = (state) => {
+    return {
+      Breed: state.Breed
+    }
+
+  }
+
+   const mapDispatchToProps = (dispatch) => {
+     return{
+       Residents: (breed) => { dispatch({type: 'SELECTED_BREEDS', breed})}
+     }
+   }
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(BreedList);

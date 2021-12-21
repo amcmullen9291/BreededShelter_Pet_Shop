@@ -28,6 +28,7 @@ function SelectedBreed(){
         fetchBreeds();
       }, [])
 
+
 return (
     <>
     <div id="mainBackGround">
@@ -63,16 +64,10 @@ return (
 }
 const mapStateToProps = (state) => {
   return {
-    Residents: state.Residents
+    Breed: state.Breed
   }
 
 }
 
-     const mapDispatchToProps = (dispatch) => {
-       return{
-         Residents: (list) => { dispatch({type: 'SET_BREEDS', list})}
-       }
-     }
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(SelectedBreed);
+export default connect(mapStateToProps, null)(SelectedBreed);
