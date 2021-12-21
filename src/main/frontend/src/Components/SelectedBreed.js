@@ -1,35 +1,37 @@
 import { connect, useDispatch } from 'react-redux';
-import { setBreeds } from '../Actions/BreedActions';
-import React, { useEffect } from 'react'
+import { selectedBreed } from '../Actions/BreedActions';
+import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { Link, useParams } from "react-router-dom";
 
 function SelectedBreed(){
 
+    const [Resident, setResident] = useState(null);
+
     const params = useParams();
-    console.log("Param Data: ", params);
+    console.log("Params ID: ", params.id);
+    console.log("Params Breed: ", params.breed)
+
+    const ID = params.id;
+    const breedName = params.breed;
+    const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/breed/" +ID;
+
+   console.log("Endpoint URL: ", BREED_LIST_URL)
 
     const Residents = useSelector((state) => state.Residents);
 
      const dispatch = useDispatch();
 
-     const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/residents";
-
-     const fetchBreeds = async () => {
-
-        const APIresponse = await axios.get(BREED_LIST_URL)
-        .then(response => {dispatch(setBreeds(response))})
-        .then(console.log(Residents.Residents.data[3]))
-        .catch((error) => {
-          console.log("Error:", error);
-        });
-
-      };
-
       useEffect(() => {
-        fetchBreeds();
-      }, [])
+        getBreed();
+
+        async function getBreed() {
+          const response = await fetch(BREED_LIST_URL);
+          const data = await response.json();
+          console.log(data) ;
+        }
+      }, []);
 
 
 return (
@@ -52,11 +54,12 @@ return (
     </div>
     <center>
     <div className="welcomePage">
-      <img id="mainImage" src={`${process.env.PUBLIC_URL}/Dogs/affenpinscher1_1.jpg`} alt="Welcome to Breed Shelter" />
+
     </div>
     </center>
     </div>
     <div id="mainBottom">
+
         <div>
         <hr/>
         <center><button id="button1" type="button" disabled ><b>Ｗ ｅ ｌ ｃ ｏ ｍ ｅ</b></button></center>
