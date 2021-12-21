@@ -152,8 +152,6 @@ margin-bottom: 5px;
 }
 
 .spacer{
-  /* background-color: black; */
-  border: 2px solid tan;
   margin-left: 1px;
   margin-right: 1px;
   width: 5px;
@@ -169,10 +167,12 @@ margin-bottom: 5px;
    margin-left: 25%;
    margin-right: 25%;
    margin-bottom: 5%;
-   background-color: #006778;
+   background-color: #E42565;
 scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
   --scrollbarBG: #CFD8DC;
+  color: #30381A;
+  font-size: 20px;
 }
 
 td{
@@ -188,7 +188,7 @@ border-bottom: 2px solid black;
 }
 
 .name{
-width: 90px;
+width: 110px;
 }
 
 .breed{
@@ -209,7 +209,7 @@ text-align: center;
 }
 
 .age{
-text-align: center;
+text-align: right;
 }
 
 tbody {
@@ -222,4 +222,8 @@ background: white;
   top: 0;
   text-align: center;
   width: auto;
+}
+
+#puppyAge{
+color:yellow;
 }

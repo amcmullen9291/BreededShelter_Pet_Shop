@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function BreedList() {
   const [Residents, setResidents] = useState(null);
@@ -32,17 +33,17 @@ return (
     <div>
     <hr/>
     </div>
-    {books && (
+    {Residents && (
       <div className="books">
 <center><table id="residentsTable">
         <thead>
-        <tr id="tableHead"><td className="name">Resident</td><td className="spacer"></td><td className="breed">Breed</td><td className="spacer"></td><td className="group">Grouping</td><td className="spacer"></td><td className="gender">Gender</td><td className="spacer"></td><td className="age"><center>Age(Weeks)</center></td></tr>
+        <tr id="tableHead"><td className="name">Resident</td><td className="spacer"></td><td className="breed">Breed</td><td className="spacer"></td><td className="group">Grouping</td><td className="spacer"></td><td className="gender">Gender</td><td className="spacer"></td><td className="age">Age(Weeks)</td></tr>
         </thead>
         <tbody>
         {Residents.map((puppy, index) => (
           <div key={index}>
             <tr>
-            <td className="name">{puppy.residentsName}</td><td className="spacer"></td><td className="breed">{puppy.breedName}</td><td className="spacer"></td><td className="group">{puppy.group}</td><td className="spacer"></td><td className="gender">{puppy.gender}</td><td className="spacer"></td><td className="age"><center>{puppy.age}</center></td>
+            <td className="name">{puppy.residentsName}</td><td className="spacer"></td><td className="breed">{puppy.breedName}</td><td className="spacer"></td><td className="group">{puppy.group}</td><td className="spacer"></td><td className="gender">{puppy.gender}</td><td className="spacer"></td><td className="age" id= "puppyAge" align="right">{puppy.age}</td><td className="spacer"></td><td><Link to={`/breeded-shelter/residents/${puppy.breedName}/${puppy.id}`}>More Info</Link></td>
             </tr>
           </div>
         ))}
