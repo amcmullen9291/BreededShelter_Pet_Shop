@@ -14,6 +14,7 @@ function SelectedBreed(){
     console.log("Params Breed: ", params.breed)
 
     const ID = params.id;
+    const breed = params.breed;
     const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/breed/" +ID;
 
     const Residents = useSelector((state) => state.Residents);
@@ -58,7 +59,14 @@ return (
     </center>
     </div>
     <div>
-    <center><span>Dog info area</span></center>
+    <center><span>{breed}</span></center>
+        {Resident && ((puppy) => (
+          <div key={puppy.index}>
+            <tr>
+            <td className="name">{puppy.residentsName}</td><td className="spacer"></td><td className="breed">{puppy.breedName}</td><td className="spacer"></td><td className="group"><button class="link">{puppy.group}</button></td><td className="spacer"></td><td className="gender">{puppy.gender}</td><td className="spacer"></td><td className="age" id= "puppyAge" align="right">{puppy.age}</td><td className="spacer"></td><td className="moreInfo"><Link to={`/breeded-shelter/residents/${puppy.breedName}/${puppy.id}`}>Info</Link></td>
+            </tr>
+          </div>
+        ))}
     </div>
     <div id="mainBottom">
 

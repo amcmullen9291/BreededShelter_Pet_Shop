@@ -10,7 +10,6 @@ function BreedList() {
 
   const [Residents, setResidents] = useState(null);
 const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/residents";
-  // + adding the use
   useEffect(() => {
     getBreeds();
 
@@ -82,7 +81,7 @@ return (
 </table>
 <button id="resetButton" onClick={resetList}>Return full list</button>
 </center>
-        <center><span>Click on a group name to see filter listings </span></center>
+        <center><span>Click on a group name to see filtered lists </span></center>
       </div>
     )}
   </div>
