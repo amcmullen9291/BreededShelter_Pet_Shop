@@ -314,6 +314,8 @@ margin-left: 8px;
              -3px 3px #77aaff,
              -4px 4px #77aaff,
              -5px 5px #77aaff;
+
+
 }
 
 .shadowLeft{
@@ -354,6 +356,7 @@ font-size: 36px;
   border: 1px solid red;
   padding: 1rem 1rem;
   vertical-align: middle;
+
 }
 
 .child img{

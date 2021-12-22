@@ -42,7 +42,7 @@ if((Breed) && Object.keys(Breed).length > 0){
           </div>
           <div class="container">
               <div class="content">
-              <div>Pet Info Area</div>
+              <div>Speak to {selectedPup.assignedStaff} to speak to {selectedPup.residentsName}</div>
               </div>
           </div>
           </>
