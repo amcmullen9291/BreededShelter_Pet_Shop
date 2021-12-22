@@ -267,6 +267,7 @@ margin: 20px;
 height:15%;
 width: 15%;
 margin-left: 10%;
+margin-right: 15px;
 }
 
 #bossPic{
@@ -285,4 +286,77 @@ button.link { background:none; border:none; }
 #puppyPics{
 height: 25%;
 width: 25%;
+}
+
+#staffWords1{
+margin-left: 8px;
+}
+
+#staffWords2{
+margin-left: 8px;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+.content {
+    width: 50%;
+    height: 50%;
+    background: #eee;
+    border: 2px solid yellow;
+    padding: 10px;
+        border: 1px solid #77aaff;
+        box-shadow:  -1px 1px #77aaff,
+             -2px 2px #77aaff,
+             -3px 3px #77aaff,
+             -4px 4px #77aaff,
+             -5px 5px #77aaff;
+}
+
+.shadowLeft{
+position: absolute;
+margin-left:0%;
+}
+
+.shadowRight{
+right:0;
+position: absolute;
+}
+
+#profileImage1{
+height: 25%;
+width: 25%;
+}
+
+#profileImage2{
+height: 25%;
+width: 25%;
+margin-left: 5px;
+}
+
+#profileBreed{
+color: #4682b4;
+font-size: 36px;
+}
+
+.parent {
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+
+.child {
+  display: inline-block;
+  border: 1px solid red;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+
+.child img{
+height: 50%;
+width: 50%;
 }
