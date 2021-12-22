@@ -39,6 +39,25 @@ if((Breed) && Object.keys(Breed).length > 0){
       console.log("Contact: ", Breed.Type[params.id].assignedStaff);
       console.log("image1: ", Breed.Type[params.id].image2);
       console.log("image2: ", Breed.Type[params.id].image1);
+
+      const selectedPup = Breed.Type[params.id];
+
+      const { id, breedName, group, gender, age, image1, image2, assignedStaff, residentsName } = selectedPup;
+
+       var ResidentDetails = (
+          <>
+          <img alt="Resident Pic"  className="" src={`${process.env.PUBLIC_URL}/Dogs/${image1}`}/><br/>
+          <div id="topColor">
+          <div id="year_built">Meet {residentsName}.</div>
+          <p id="mascot">Age: {age}</p>
+          <img alt="Resident Pic"  className="mascot_img" src={`${process.env.PUBLIC_URL}/Dogs/${image2}`}/>
+          </div>
+          <div id="bottomColor">
+            <span id="division">{breedName}</span>
+            <center><div id="bioLine">{group}</div></center>
+          </div>
+          </>
+        )
 }
 
 return (
@@ -67,7 +86,9 @@ return (
     </div>
     <div>
     <center><span>{breed}</span></center>
-        <center><img id="puppyPics" src={`${process.env.PUBLIC_URL}/Dogs/${breedPic}`} alt="Resident Pic" /></center>
+    </div>
+    <div>
+    {ResidentDetails}
     </div>
     <div id="mainBottom">
 
