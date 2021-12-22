@@ -275,3 +275,8 @@ button.link { background:none; border:none; }
     border-radius: 15%;
     border: 1px solid brown;
 }
+
+#puppyPics{
+height: 25%;
+width: 25%;
+}

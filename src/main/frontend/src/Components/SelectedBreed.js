@@ -11,15 +11,16 @@ function SelectedBreed(){
 
     const params = useParams();
     console.log("Params ID: ", params.id);
-    console.log("Params Breed: ", params.breed)
+    console.log("Params Breed: ", params.breed);
 
     const ID = params.id;
-    const breed = params.breed;
+    const breed = params.breed.toLowerCase();
+    const breedPic = breed+"1_1.jpg";
     const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/breed/" +ID;
 
     const Residents = useSelector((state) => state.Residents);
 
-     const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
       useEffect(() => {
         getBreed();
@@ -31,8 +32,6 @@ function SelectedBreed(){
           console.log(data) ;
         }
       }, []);
-
-      console.log("resident data: ", Resident);
 
 return (
     <>
@@ -60,13 +59,7 @@ return (
     </div>
     <div>
     <center><span>{breed}</span></center>
-        {Resident && ((puppy) => (
-          <div key={puppy.index}>
-            <tr>
-            <td className="name">{puppy.residentsName}</td><td className="spacer"></td><td className="breed">{puppy.breedName}</td><td className="spacer"></td><td className="group"><button class="link">{puppy.group}</button></td><td className="spacer"></td><td className="gender">{puppy.gender}</td><td className="spacer"></td><td className="age" id= "puppyAge" align="right">{puppy.age}</td><td className="spacer"></td><td className="moreInfo"><Link to={`/breeded-shelter/residents/${puppy.breedName}/${puppy.id}`}>Info</Link></td>
-            </tr>
-          </div>
-        ))}
+        <center><img id="puppyPics" src={`${process.env.PUBLIC_URL}/Dogs/${breedPic}`} alt="Resident Pic" /></center>
     </div>
     <div id="mainBottom">
 
