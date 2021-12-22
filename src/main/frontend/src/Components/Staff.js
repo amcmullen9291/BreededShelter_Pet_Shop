@@ -61,7 +61,7 @@ return (
 
         <div className="staffRightArea">
             <p id="staffWords">Lconsectetur adipiscing elit, sed do. Eiusmod tempor incididunt ut labore et dolore magna!
-        <img className="staffPics" src={`${process.env.PUBLIC_URL}/Staff/bossPic.jpg`} alt="..." height="" width="" /></p>
+        <img className="staffPics" id="bossPic" src={`${process.env.PUBLIC_URL}/Staff/bossPic.jpg`} alt="..." height="" width="" /></p>
         </div>
 
     <div className="staffRightArea">

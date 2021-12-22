@@ -167,9 +167,10 @@ margin-bottom: 5px;
    margin-left: 25%;
    margin-right: 25%;
    margin-bottom: 5%;
-   background-color: #E42565;
+    background-color: lightgreen;
   color: #30381A;
   font-size: 20px;
+  scrollbar-color: initial;
 }
 
 td{
@@ -259,12 +260,17 @@ font-size: 2em;
 #jumpingMan{
 height:15%;
 width: 15%;
+margin: 20px;
 }
 
 #singingGirl{
 height:15%;
 width: 15%;
 margin-left: 10%;
+}
+
+#bossPic{
+margin: 8px;
 }
 
 button.link { background:none; border:none; }

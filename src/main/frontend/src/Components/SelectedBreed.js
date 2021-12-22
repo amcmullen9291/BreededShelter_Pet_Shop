@@ -8,7 +8,7 @@ import { Link, useParams } from "react-router-dom";
 function SelectedBreed(){
 
     const [Resident, setResident] = useState(null);
-
+    const Breed = useSelector(state => state.Breed);
     const params = useParams();
     console.log("Params ID: ", params.id);
     console.log("Params Breed: ", params.breed);
@@ -18,20 +18,21 @@ function SelectedBreed(){
     const breedPic = breed+"1_1.jpg";
     const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/breed/" +ID;
 
-    const Residents = useSelector((state) => state.Residents);
-
     const dispatch = useDispatch();
 
       useEffect(() => {
-        getBreed();
+        if(ID && ID !== ""){getBreed()};
 
         async function getBreed() {
           const response = await fetch(BREED_LIST_URL);
           const data = await response.json();
           setResident(data);
+          dispatch(selectedBreed(data));
           console.log(data) ;
         }
       }, []);
+
+      console.log("Available Data: ", Breed.Type[8].residentsName);
 
 return (
     <>
