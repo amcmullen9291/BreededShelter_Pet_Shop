@@ -26,10 +26,12 @@ function SelectedBreed(){
         async function getBreed() {
           const response = await fetch(BREED_LIST_URL);
           const data = await response.json();
+          setResident(data);
           console.log(data) ;
         }
       }, []);
 
+      console.log("resident data: ", Resident);
 
 return (
     <>
@@ -54,6 +56,9 @@ return (
 
     </div>
     </center>
+    </div>
+    <div>
+    <center><span>Dog info area</span></center>
     </div>
     <div id="mainBottom">
 

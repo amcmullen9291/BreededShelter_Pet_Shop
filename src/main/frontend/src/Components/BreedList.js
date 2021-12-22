@@ -41,8 +41,8 @@ const BREED_LIST_URL = "http://localhost:8080/breeded_shelter/residents";
   function resetList(e){
           e.preventDefault();
           let button = document.getElementById("resetButton");
-          button.style.visibility = "hidden";
           window.location.reload();
+          button.style.visibility = "hidden";
           console.log("page resetting");
         }
 
