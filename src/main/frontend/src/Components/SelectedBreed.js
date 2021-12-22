@@ -10,8 +10,6 @@ function SelectedBreed(){
     const [Resident, setResident] = useState(null);
     const Breed = useSelector(state => state.Breed);
     const params = useParams();
-    console.log("Params ID: ", params.id);
-    console.log("Params Breed: ", params.breed);
 
     const ID = params.id;
     const breed = params.breed.toLowerCase();
@@ -28,11 +26,20 @@ function SelectedBreed(){
           const data = await response.json();
           setResident(data);
           dispatch(selectedBreed(data));
-          console.log(data) ;
         }
       }, []);
 
-      console.log("Available Data: ", Breed.Type[8].residentsName);
+
+if((Breed) && Object.keys(Breed).length > 0){
+      console.log("Available Data: ", Breed.Type[params.id].residentsName);
+      console.log("group: ", Breed.Type[params.id].group);
+      console.log("breed: ", Breed.Type[params.id].breedName);
+      console.log("age: ", Breed.Type[params.id].age);
+      console.log("gender: ", Breed.Type[params.id].gender);
+      console.log("Contact: ", Breed.Type[params.id].assignedStaff);
+      console.log("image1: ", Breed.Type[params.id].image2);
+      console.log("image2: ", Breed.Type[params.id].image1);
+}
 
 return (
     <>
